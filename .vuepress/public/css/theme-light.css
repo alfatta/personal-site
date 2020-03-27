@@ -1,0 +1,5 @@
+html[data-theme=light] {
+  --background-color : #ffffff;
+  --accent-color : #64320a;
+  --text-color : #212121;
+}
