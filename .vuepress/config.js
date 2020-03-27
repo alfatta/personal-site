@@ -17,6 +17,7 @@ module.exports = {
     ['link', { rel: 'stylesheet', href: '/css/theme-dark.css' }],
     ['link', { rel: 'stylesheet', href: '/css/theme-light.css' }],
     ['link', { rel: 'stylesheet', href: '/css/index.css' }],
+    ['script', { src: '/js/index.js' }],
   ],
 
   // THEME CONFIGURATION
