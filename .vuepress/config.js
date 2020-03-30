@@ -13,7 +13,7 @@ module.exports = {
   description: siteDescription,
   head: [
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Dosis|Open+Sans&display=swap' }],
-    ['script', { src: '/assets/js/main.js' }],
+    ['script', { src: '/assets/js/main.min.js' }],
   ],
 
   // THEME CONFIGURATION

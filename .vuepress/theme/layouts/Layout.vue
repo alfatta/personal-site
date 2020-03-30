@@ -2,6 +2,7 @@
   <div>
     <Header v-if="$page.frontmatter.home" />
     <Content />
+    <ToggleLight />
   </div>
 </template>
 
@@ -9,9 +10,8 @@
 export default {
   name: 'Layout',
   components: {
-    Header: () => import(
-      /* webpackChunkName: "c-header" */
-      '../components/Header.vue'),
+    Header: () => import('../components/Header.vue'),
+    ToggleLight: () => import('../components/ToggleLight.vue'),
   },
 }
 </script>

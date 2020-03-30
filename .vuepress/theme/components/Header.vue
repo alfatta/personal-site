@@ -14,9 +14,7 @@
 export default {
   name: 'c-header',
   components: {
-    HeaderMask: () => import(
-      /* webpackChunkName: "c-header-mask" */
-      './HeaderMask.vue'),
+    HeaderMask: () => import('./HeaderMask.vue'),
   },
 };
 </script>
