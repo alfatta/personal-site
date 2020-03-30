@@ -14,6 +14,17 @@ module.exports = {
   head: [
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Dosis|Open+Sans&display=swap' }],
     ['script', { src: '/assets/js/main.min.js' }],
+
+    // FOR PWA PURPOSE
+    ['link', { rel: 'icon', href: 'https://res.cloudinary.com/alfatta/image/upload/v1581584168/personal-site/assets/icon.png' }],
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
+    ['meta', { name: 'theme-color', content: '#64320a' }],
+    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['link', { rel: 'apple-touch-icon', href: '/assets/images/icons/icon-152x152.png' }],
+    ['link', { rel: 'mask-icon', href: '/assets/images/icons/icon-152x152.png', color: '#64320a' }],
+    ['meta', { name: 'msapplication-TileImage', content: '/assets/images/icons/icon-144x144.png' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
   ],
 
   // THEME CONFIGURATION
@@ -30,4 +41,13 @@ module.exports = {
       permalink: false,
     },
   },
+  plugins: [
+    [
+      '@vuepress/pwa',
+      {
+        serviceWorker: true,
+        updatePopup: true
+      }
+    ]
+  ],
 }
