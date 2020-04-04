@@ -54,6 +54,7 @@ module.exports = {
       '@vuepress/pwa',
       {
         serviceWorker: true,
+        popupComponent: 'UpdatePopup',
         updatePopup: true
       }
     ]
