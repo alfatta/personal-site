@@ -16,14 +16,22 @@ module.exports = {
     ['script', { src: '/assets/js/main.min.js' }],
 
     // FOR PWA PURPOSE
-    ['link', { rel: 'icon', href: 'https://res.cloudinary.com/alfatta/image/upload/v1581584168/personal-site/assets/icon.png' }],
+    ['link', { rel: 'icon', href: '/favicon.ico', sizes: '16x16 32x32 48x48 64x64', type: 'image/vnd.microsoft.icon' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
+
     ['meta', { name: 'theme-color', content: '#64320a' }],
+
+
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
-    ['link', { rel: 'apple-touch-icon', href: '/assets/images/icons/icon-152x152.png' }],
-    ['link', { rel: 'mask-icon', href: '/assets/images/icons/icon-152x152.png', color: '#64320a' }],
-    ['meta', { name: 'msapplication-TileImage', content: '/assets/images/icons/icon-144x144.png' }],
+    ['meta', { rel: 'apple-touch-icon-precomposed', sizes: '57x57', href: '/assets/img/apple-icon-57x57-precomposed.png' } ],
+    ['meta', { rel: 'apple-touch-icon-precomposed', sizes: '72x72', href: '/assets/img/apple-icon-72x72-precomposed.png' } ],
+    ['meta', { rel: 'apple-touch-icon-precomposed', sizes: '114x114', href: '/assets/img/apple-icon-114x114-precomposed.png' } ],
+    ['meta', { rel: 'apple-touch-icon-precomposed', sizes: '144x144', href: '/assets/img/apple-icon-144x144-precomposed.png' } ],
+    ['link', { rel: 'apple-touch-icon', href: '/assets/img/icon-152x152.png' }],
+    ['link', { rel: 'mask-icon', href: '/assets/img/icon-152x152.png', color: '#64320a' }],
+
+    ['meta', { name: 'msapplication-TileImage', content: '/assets/img/icon-144x144.png' }],
     ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
   ],
 
@@ -32,8 +40,8 @@ module.exports = {
     header: {
       title: siteTitle,
       description: siteDescription,
-      background: 'https://res.cloudinary.com/alfatta/image/upload/v1581584168/personal-site/assets/bg.jpg',
-      icon: 'https://res.cloudinary.com/alfatta/image/upload/v1581584168/personal-site/assets/icon.png'
+      background: '/assets/img/bg.jpg',
+      icon: '/assets/img/logo.png'
     },
   },
   markdown: {

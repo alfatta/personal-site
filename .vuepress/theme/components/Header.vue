@@ -45,6 +45,7 @@ export default {
     img {
       width: 100%;
       max-width: 150px;
+      border-radius: 50%;
     }
 
     p {
