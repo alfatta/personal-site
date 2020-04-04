@@ -19,8 +19,7 @@ module.exports = {
     ['link', { rel: 'icon', href: '/favicon.ico', sizes: '16x16 32x32 48x48 64x64', type: 'image/vnd.microsoft.icon' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
 
-    ['meta', { name: 'theme-color', content: '#64320a' }],
-
+    ['meta', { name: 'theme-color', content: '#141414' }],
 
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
@@ -29,10 +28,10 @@ module.exports = {
     ['meta', { rel: 'apple-touch-icon-precomposed', sizes: '114x114', href: '/assets/img/apple-icon-114x114-precomposed.png' } ],
     ['meta', { rel: 'apple-touch-icon-precomposed', sizes: '144x144', href: '/assets/img/apple-icon-144x144-precomposed.png' } ],
     ['link', { rel: 'apple-touch-icon', href: '/assets/img/icon-152x152.png' }],
-    ['link', { rel: 'mask-icon', href: '/assets/img/icon-152x152.png', color: '#64320a' }],
+    ['link', { rel: 'mask-icon', href: '/assets/img/icon-152x152.png', color: '#FFFFFF' }],
 
     ['meta', { name: 'msapplication-TileImage', content: '/assets/img/icon-144x144.png' }],
-    ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
+    ['meta', { name: 'msapplication-TileColor', content: '#FFFFFF' }]
   ],
 
   // THEME CONFIGURATION
