@@ -24,7 +24,6 @@ export default {
   color: #FFFFFF;
   position: relative;
   height: 400px;
-  border-top: 5px solid var(--accent-color);
 
   .header-image{
     width: 100%;
