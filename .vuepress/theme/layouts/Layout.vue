@@ -2,10 +2,10 @@
   <div>
     <TopBar />
     <Header v-if="layoutIs('home')" />
+    <Navbar v-if="!layoutIs('home')" />
     <div class="container" v-if="!layoutIs('home')">
       <Content />
     </div>
-    <Navbar />
     <ToggleLight />
   </div>
 </template>

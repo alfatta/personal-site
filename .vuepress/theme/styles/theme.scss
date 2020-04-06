@@ -1,11 +1,13 @@
 html[data-theme=dark] {
   --background-color : #141414;
+  --secondary-background-color : #212121;
   --accent-color : #64320a;
   --text-color : #adadad;
 }
 
 html[data-theme=light] {
   --background-color : #ffffff;
+  --secondary-background-color : #bfbfbf;
   --accent-color : #64320a;
   --text-color : #212121;
 }
