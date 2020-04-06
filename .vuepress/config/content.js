@@ -9,5 +9,23 @@ module.exports = {
       background: '/assets/img/bg.jpg',
       icon: '/assets/img/logo.png'
     },
+    navMenu: [
+      {
+        path: '/',
+        title: 'Home',
+      },
+      {
+        path: '/about',
+        title: 'About',
+      },
+      {
+        path: '/now',
+        title: 'Now',
+      },
+      {
+        path: '/blog',
+        title: 'Blogs',
+      }
+    ]
   },
 }

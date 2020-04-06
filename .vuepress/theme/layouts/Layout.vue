@@ -5,6 +5,7 @@
     <div class="container" v-if="!layoutIs('home')">
       <Content />
     </div>
+    <Navbar />
     <ToggleLight />
   </div>
 </template>
@@ -26,6 +27,7 @@ export default {
   components: {
     TopBar: () => import('../components/TopBar.vue'),
     Header: () => import('../components/Header.vue'),
+    Navbar: () => import('../components/Navbar.vue'),
     ToggleLight: () => import('../components/ToggleLight.vue'),
   },
 }
