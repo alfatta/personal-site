@@ -25,6 +25,9 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ic-menu:before {
+  content: "\e9bd";
+}
 .ic-light:before {
   content: "\e9d4";
 }
