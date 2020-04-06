@@ -13,6 +13,7 @@ module.exports = {
   description: siteDescription,
   head: [
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Dosis|Open+Sans&display=swap' }],
+    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/gh/tonsky/FiraCode@2/distr/fira_code.css' }],
     ['script', { src: '/assets/js/main.min.js' }],
 
     // FOR PWA PURPOSE

@@ -1,0 +1,65 @@
+.extra-class {
+  padding: 20px;
+  background-color: #262335;
+  border-radius: 10px;
+  
+  pre {
+    padding: 5px;
+    overflow-x: scroll;
+
+    // code snippet scrollbar
+    &::-webkit-scrollbar {
+      height: 10px;
+    }
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #9d8bca30;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: #9d8bca50;
+    }
+
+    code, code * {
+      line-height: 1.5em;
+      font-size: 14px;
+      font-family: 'Fira Code', monospace !important; 
+  
+      @supports (font-variation-settings: normal) {
+        & { font-family: 'Fira Code VF', monospace !important; }
+      }
+
+      .token.delimiter {
+        color: #fede5d
+      }
+      .token.comment {
+        color: #495495;
+        font-style: italic;
+      }
+      .token.variable {
+        color: #ff7edb;
+      }
+      .token.operator {
+        color: #fede5d;
+      }
+      .token.keyword {
+        color: #36f9f6;
+      }
+      .token.punctuation {
+        color: #b6b1b1;
+      }
+      .token.single-quoted-string,
+      .token.double-quoted-string {
+        color: #ff8b39;
+      }
+      .token.function {
+        color: #36f9f6;
+      }
+      .token.number {
+        color: #f97e72;
+      }
+    }
+  }
+}
