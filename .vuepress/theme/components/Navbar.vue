@@ -1,18 +1,21 @@
 
 <template>
   <div class="navbar">
-    <div class="navbar-toggle" >
-      <div class="navbar-brand">
+    <div class="navbar-header">
+      <a href="/" class="navbar-brand">
         <img :src="$themeConfig.header.icon" alt="">
         <h1>Alfatta Rezqa</h1>
-      </div>
-      <label for="toggle-navbar">&#9776;</label>
-    </div>
-    <input type="checkbox" id="toggle-navbar">
-    <div class="navbar-menu" id="navmenu">
-      <a :href="menu.path" class="menu-item" v-for="menu in navMenu">
-        {{ menu.title }}
       </a>
+      <div class="navbar-toggle">
+        <label for="toggle-navbar">&#9776;</label>
+      </div>
+      <div class="break"></div>
+      <input type="checkbox" id="toggle-navbar">
+      <div class="navbar-menu" id="navmenu">
+        <a :href="menu.path" class="menu-item" v-for="menu in navMenu">
+          {{ menu.title }}
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -29,37 +32,68 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+a {
+  color: var(--text-color);
+
+  &:hover {
+    border-color: var(--text-color);
+
+    &.navbar-brand{
+      border-color: transparent;
+    }
+  }
+}
+
 .navbar {
   background-color: var(--secondary-background-color);
   position: sticky;
   top: 5px;
 
-  input {
-    display: none;
-  }
-    
-  .navbar-toggle {
-    padding: 15px;
-    display: none;
+  .navbar-header {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    
-    .navbar-brand {
-      * {
-        display: inline-block;
-        vertical-align: middle;
-      }
-      h1 {
-        font-family: 'Dosis', sans-serif;
-        font-size: 1.5em;
-        margin-left: 5px;
-      }
-      img {
-        border-radius: 50%;
-        height: 2em;
-      }
+    padding: 15px;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .navbar-brand {
+    text-decoration: none;
+    * {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    h1 {
+      font-family: 'Dosis', sans-serif;
+      font-size: 1.5em;
+      margin-left: 15px;
+    }
+    img {
+      border-radius: 50%;
+      height: 2em;
+    }
+  }
+
+  .navbar-menu {
+    display: flex;
+    flex-wrap: wrap;
+
+    .menu-item + .menu-item {
+      margin-left: 10px;
     }
     
+    .menu-item {
+      padding: 8px 14px;
+    }
+  }
+
+  .navbar-toggle {
+    display: none;
+
     label {
       cursor: pointer;
       padding: 5px 8px;
@@ -69,40 +103,44 @@ export default {
     }
   }
 
-  .navbar-menu {
-    text-align: center;
-    
-    a, a:visited {
-      display: inline-block;
-      box-sizing: border-box;
-      padding: 20px;
-      color: var(--text-color);
-      text-decoration: none;
-      border-bottom: 1px dotted var(--background-color);
+  input {
+    display: none;
+  }
 
-      &:hover {
-        color: var(--accent-color);
-        border-bottom-color: var(--accent-color);
-      }
-    }
+  .break {
+    display: none;
+    flex-basis: 100%;
+    height: 0;
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
   .navbar {
     .navbar-toggle {
-      display: flex;
+      display: block;
     }
-
+    
     .navbar-menu {
       display: none;
+      margin-top: 20px;
+      flex-basis: 100%;
+      
+      .menu-item {
+        flex-basis: 100%;
+        text-align: center;
+      }
 
-      a {
-        display: block;
+      .menu-item + .menu-item {
+        margin: 0 !important;
+        margin-top: 5px !important;
       }
     }
 
     input:checked + .navbar-menu {
+      display: flex;
+    }
+
+    .break {
       display: block;
     }
   }
