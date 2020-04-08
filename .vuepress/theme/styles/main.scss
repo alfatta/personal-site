@@ -5,3 +5,13 @@ body {
 body * {
   font-family: 'Open Sans', sans-serif;
 }
+
+
+a, a:visited {
+  color: var(--accent-color);
+  text-decoration: none;
+  border-bottom: dotted 1px transparent;
+}
+a:hover {
+  border-bottom: dotted 1px var(--accent-color);
+}

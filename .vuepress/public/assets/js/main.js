@@ -34,6 +34,16 @@ function toggleLight() {
   setupLight();
 }
 
+function toggleNavbar() {
+  let nav = document.getElementById('navmenu')
+  let navDisplay = nav.style.display
+  if (!navDisplay || navDisplay == 'none') {
+    nav.style.display = 'block'
+  } else {
+    nav.style.display = 'none'
+  }
+}
+
 domReady(function() {
 
 });

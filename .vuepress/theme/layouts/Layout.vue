@@ -2,6 +2,7 @@
   <div>
     <TopBar />
     <Header v-if="layoutIs('home')" />
+    <Navbar v-if="!layoutIs('home')" />
     <div class="container" v-if="!layoutIs('home')">
       <Content />
     </div>
@@ -26,6 +27,7 @@ export default {
   components: {
     TopBar: () => import('../components/TopBar.vue'),
     Header: () => import('../components/Header.vue'),
+    Navbar: () => import('../components/Navbar.vue'),
     ToggleLight: () => import('../components/ToggleLight.vue'),
   },
 }
