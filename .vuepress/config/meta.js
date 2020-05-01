@@ -5,6 +5,7 @@ module.exports = {
   title: siteTitle,
   description: siteDescription,
   head: [
+    ['link', { rel: 'preconnect', href: 'https://storage.googleapis.com/' }],
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Dosis|Open+Sans&display=swap' }],
     ['script', { src: 'https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js' }],
     ['script', { src: '/assets/js/main.min.js' }],
