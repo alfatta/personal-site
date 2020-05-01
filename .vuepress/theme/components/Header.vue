@@ -27,6 +27,11 @@ export default {
   background-color: var(--secondary-background-color);
   overflow: hidden;
 
+  #particles {
+    width: 100%;
+    height: 100%;
+  }
+
   .header-image{
     width: 100%;
     height: 400px;
