@@ -28,10 +28,14 @@ function setupLight() {
 }
 
 function changeParticleColor(newColor) {
-  for (let i = 0; i < pJSDom[0].pJS.particles.array.length; i++) {
-    pJSDom[0].pJS.particles.array[i].color.value = newColor;
-    pJSDom[0].pJS.particles.array[i].color.rgb = hexToRgb(newColor);
+  if (pJSDom.length) {
+    for (let i = 0; i < pJSDom[0].pJS.particles.array.length; i++) {
+      pJSDom[0].pJS.particles.array[i].color.value = newColor;
+      pJSDom[0].pJS.particles.array[i].opacity.value = 0.1;
+      pJSDom[0].pJS.particles.array[i].color.rgb = hexToRgb(newColor);
+    }
     pJSDom[0].pJS.particles.line_linked.color_rgb_line = hexToRgb(newColor);
+    pJSDom[0].pJS.particles.line_linked.opacity = 0.4;
   }
 }
 
@@ -42,7 +46,14 @@ function hexToRgb(hex) {
   } : null;
 }
 
+particlesJS.load('particles', '/assets/particles.json');
 setupLight();
+var checkPJSDom = setInterval(() => {
+  if (typeof(pJSDom) !== 'undefined') {
+    setupLight();
+    clearInterval(checkPJSDom);
+  }
+}, 500);
 
 function toggleLight() {
   lightUp = !lightUp;
