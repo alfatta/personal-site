@@ -6,6 +6,7 @@ module.exports = {
   description: siteDescription,
   head: [
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Dosis|Open+Sans&display=swap' }],
+    ['script', { src: 'https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js' }],
     ['script', { src: '/assets/js/main.min.js' }],
 
     ['link', { rel: 'icon', href: '/favicon.ico', sizes: '16x16 32x32 48x48 64x64', type: 'image/vnd.microsoft.icon' }],
