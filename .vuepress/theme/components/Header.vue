@@ -2,7 +2,7 @@
   <div class="header">
     <div id="particles"></div>
     <div class="header-content">
-      <img class="brand" :src="$themeConfig.header.icon">
+      <img class="brand" :src="$themeConfig.header.icon" :alt="$themeConfig.header.title">
       <p>Hi, I'm</p>
       <h1>{{ $themeConfig.header.title }}</h1>
     </div>
