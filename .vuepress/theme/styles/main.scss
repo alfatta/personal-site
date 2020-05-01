@@ -4,9 +4,8 @@ body {
 }
 body * {
   font-family: 'Open Sans', sans-serif;
+  transition: background 1s linear;
 }
-
-
 a, a:visited {
   color: var(--accent-color);
   text-decoration: none;

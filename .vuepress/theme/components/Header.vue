@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <img :src="$themeConfig.header.background" class="header-image">
+    <div id="particles"></div>
     <div class="header-content">
       <img class="brand" :src="$themeConfig.header.icon">
       <p>Hi, I'm</p>
@@ -11,11 +11,25 @@
 </template>
 
 <script>
+import 'particles.js'
+import particlesConfig from '../styles/particles.json'
+
 export default {
   name: 'c-header',
   components: {
     HeaderMask: () => import('./HeaderMask.vue'),
   },
+  mounted() {
+    particlesJS('particles', particlesConfig);
+    var item = document.createElement('div');
+    item.onclick = function () {
+      setupLight()
+    };
+    item.style.display = 'none';
+    document.body.appendChild(item);
+    item.click();
+    document.body.removeChild(item);
+  }
 };
 </script>
 
@@ -24,6 +38,8 @@ export default {
   color: #FFFFFF;
   position: relative;
   height: 400px;
+  background-color: var(--secondary-background-color);
+  overflow: hidden;
 
   .header-image{
     width: 100%;
@@ -57,6 +73,18 @@ export default {
       font-size: 2.5em;
       font-family: 'Dosis', sans-serif;
       letter-spacing: 2px;
+
+      &::after {
+        content: '_';
+        animation: blinkingText 1.2s infinite;
+      }
+      @keyframes blinkingText{
+        0%  { color: var(--text-color); }
+        49% { color: var(--text-color); }
+        60% { color: transparent; }
+        99% { color: transparent; }
+        100%{ color: var(--text-color); }
+      }
     }
   }
 }
